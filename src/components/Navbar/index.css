@@ -1,4 +1,9 @@
-#header {
+
+  
+  /*--------------------------------------------------------------
+  # Header
+  --------------------------------------------------------------*/
+  #header {
     transition: ease-in-out 0.3s;
     position: relative;
     height: 100vh;
@@ -18,7 +23,7 @@
     font-weight: 700;
     font-family: "Poppins", sans-serif;
   }
-  #header h1 a, #header h1 a:hover {
+  #header h1 , #header h1 :hover {
     color: #fff;
     line-height: 1;
     display: inline-block;
@@ -53,6 +58,7 @@
     border-radius: 50%;
     width: 40px;
     height: 40px;
+    text-decoration: none
   }
   #header .social-links a:hover {
     background: #18d26e;
@@ -198,10 +204,13 @@
     right: 0;
     left: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.9);
+    background: transparent;
     transition: 0.3s;
     z-index: 999;
     margin-top: 0;
+    height: 50vh;
+    width: 100%;
+    
   }
   .navbar-mobile .mobile-nav-toggle {
     position: absolute;
@@ -222,6 +231,9 @@
   }
   .navbar-mobile li {
     padding: 12px 20px;
+  }
+  .navbar-mobile li a{
+    color: white;
   }
   .navbar-mobile li + li {
     margin: 0;

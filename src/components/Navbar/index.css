@@ -129,9 +129,11 @@
     display: flex;
     list-style: none;
     align-items: center;
+    
   }
   .navbar li {
     position: relative;
+    text-transform: capitalize;
   }
   .navbar li + li {
     margin-left: 30px;
@@ -231,9 +233,11 @@
   }
   .navbar-mobile li {
     padding: 12px 20px;
+    text-transform: capitalize;
   }
   .navbar-mobile li a{
     color: white;
+
   }
   .navbar-mobile li + li {
     margin: 0;

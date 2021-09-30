@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './index.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { items } from './content';
 
 
 function NavBar() {
@@ -17,10 +18,13 @@ function NavBar() {
 
                     <nav id="navbar" className={`${click ?"navbar navbar-mobile":"navbar"}`}>
                         <ul>
-                            <li><a className="nav-link active" href="#header">Home</a></li>
-                            <li><a className="nav-link" href="#about">About</a></li>
-                            <li><a className="nav-link" href="#resume">Resume</a></li>
-                            <li><a className="nav-link" href="#contact">Contact</a></li>
+                            {items.map((each,index)=>(
+                                <li><a className="nav-link" href={each.to}
+                                exact
+                                to={each.to}
+                                key={index}
+                                >{each.to}</a></li>
+                            ))}
                         </ul>
                         <i 
                         className={`${click ? "fas fa-times mobile-nav-toggle" : "fas fa-bars mobile-nav-toggle" }`}
